@@ -95,7 +95,8 @@ function App() {
       </main> 
      */}
 
-      <Library />
+      {/* <Library /> */}
+      <CourseListCard />
 
     </div>
   );
