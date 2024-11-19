@@ -1,5 +1,9 @@
 import CourseItem from './Courseitem';
 
+
+
+
+
 function CourseListCard({ items }) {
     const [course1, course2, course3] = items;
     return (
