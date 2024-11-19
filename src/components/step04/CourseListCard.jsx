@@ -1,23 +1,34 @@
-import CourseItem from './Courseitem';
+import React from 'react';
 
-
-
-
-
-function CourseListCard({ items }) {
-    const [course1, course2, course3] = items;
+function HeartIconBtn({ chk = false }) {
+    if (chk) {
+        return (
+            <button className="btn">
+                <img className='btn_img' src='./img/heart-fill-icon.svg' />
+            </button>
+        )
+    }
     return (
-        <div className="card">
-        <div className="card__header">강의 목록</div>
-        <div className="card__body">
-            <div className="courses">
-                <CourseItem {...course1}/>
-                <CourseItem {...course2}/>
-                <CourseItem {...course3}/>
+        <button className="btn">
+            <img className='btn_img' src='./img/heart-icon.svg' />
+        </button>
+    )
+}
+
+function CourseItem({ title, description, image, isFavorite }) {
+    return (
+        <article className="course">
+            <img className="course__img" src={image} alt='강의이미지' style={{ width: "100px" }} />
+            <div className="course__body">
+                <div className="course__title">{title}</div>
+                <div className="course__description">{description}</div>
             </div>
-        </div>
-    </div>
+            <div className='course_icons'>
+                <HeartIconBtn chk={isFavorite} />
+            </div>
+        </article>
     );
 }
 
-export default CourseListCard;
+
+export default CourseItem;

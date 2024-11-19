@@ -1,25 +1,19 @@
 import React from 'react';
 
-function HeartIconBtn({chk = false}) {
-    if(chk){
-        return(
-            <button className='btn'>
+function HeartIconBtn({ chk = false }) {
+    if (chk) {
+        return (
+            <button className="btn">
                 <img className='btn_img' src='./img/heart-fill-icon.svg' />
             </button>
         )
     }
-    return(
-        <button className='btn'>
-                <img className='btn_img' src='./img/heart-icon.svg' />
-            </button>
-
+    return (
+        <button className="btn">
+            <img className='btn_img' src='./img/heart-icon.svg' />
+        </button>
     )
 }
-
-
-
-
-
 
 function CourseItem({ title, description, image, isFavorite }) {
     return (
@@ -35,9 +29,6 @@ function CourseItem({ title, description, image, isFavorite }) {
         </article>
     );
 }
-
-
-
 
 
 export default CourseItem;

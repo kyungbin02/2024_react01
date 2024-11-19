@@ -1,24 +1,18 @@
-import React from 'react';
 
-
-function HeartIconBtn({chk = false}) {
-    if(chk){
-        return(
-            <button className='btn'>
-                <img className='btn_img' src='./img/heart-fill-icon.svg' />
-            </button>
-        )
+function HeartIconBtn({ chk = false }) {
+    function handleFavorite() {
+        chk = !chk;
+        alert(chk ? "좋아요" : "모르겠어요");
+        console.log(chk);
     }
-    return(
-        <button className='btn'>
-                <img className='btn_img' src='./img/heart-icon.svg' />
-            </button>
-
-    )
+    return (
+        <button className='btn' onClick={handleFavorite}>
+            <img className='btn_img' src={chk ? './img/heart-fill-icon.svg' : './img/heart-icon.svg'} />
+        </button>
+    );
 }
 
-
-function Courseltem08(props) {
+function CourseItem08({ title, description, image, isFavorite }) {
     return (
         <article className="course">
             <img className="course__img" src={image} alt='강의이미지' style={{ width: "100px" }} />
@@ -33,4 +27,4 @@ function Courseltem08(props) {
     );
 }
 
-export default Courseltem08;
+export default CourseItem08;
