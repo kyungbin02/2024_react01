@@ -8,6 +8,7 @@ import Library from './components/step01/Library';
 import Avatar from './components/step02/Avatar';
 import Profile from './components/step02/Profile';
 import CourseListCard from './components/step04/CourseListCard';
+import PackingList from './components/step05/PackingList';
 
 function App() {
   const items = [
@@ -29,10 +30,13 @@ function App() {
   ]
 
   // 조건부 렌더링 : if, &&, 삼항연산자(조건식? 참:거짓)
-  const ischk = true;
+  const ischk = false;
   return (
     <div className='App'>
       {ischk ? <h2>Hello, react </h2> : <CourseListCard items={items} />}
+      <hr />
+      <PackingList />
+
     </div>
   );
 }
