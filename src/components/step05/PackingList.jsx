@@ -1,30 +1,26 @@
 import React from 'react';
 import Item from './Item';
 
-
-
-
 function PackingList(props) {
     return (
         <section>
-                <h1>조건부 렌더링</h1>
-                <ul>
-                    <Item
-                    isPacked={true} 
+            <h1> 조건부 렌더링 </h1>
+            <ul>
+                <Item
+                    isPacked={true}
                     name="고길동"
-                    />
-                    <Item
-                    isPacked={true} 
+                />
+                <Item
+                    isPacked={false}
                     name="둘리"
-                    />
-                    <Item
-                    isPacked={true} 
+                />
+                <Item
+                    isPacked={true}
                     name="희동이"
-                    />
-                    
-                </ul>
+                />
+            </ul>
         </section>
     );
 }
 
-export default PackingList;
+export default PackingList 

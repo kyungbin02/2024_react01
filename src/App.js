@@ -9,6 +9,9 @@ import Avatar from './components/step02/Avatar';
 import Profile from './components/step02/Profile';
 import CourseListCard from './components/step04/CourseListCard';
 import PackingList from './components/step05/PackingList';
+import TextList from './components/step06/TextList';
+import TextList2 from './components/step06/TextList2';
+import TextList3 from './components/step06/TextList3';
 
 function App() {
   const items = [
@@ -36,7 +39,14 @@ function App() {
       {ischk ? <h2>Hello, react </h2> : <CourseListCard items={items} />}
       <hr />
       <PackingList />
-
+      <hr />
+      <h1> 키가 없어 오류 발생 </h1>
+      <TextList />
+      <hr />
+      <h1>키가 존재한다.</h1>
+      <TextList2 />
+      <hr />
+      <TextList3 />
     </div>
   );
 }
