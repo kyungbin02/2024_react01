@@ -26,4 +26,5 @@ function CourseListCard() {
         </div>
     );
 }
+
 export default CourseListCard;
