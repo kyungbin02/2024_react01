@@ -12,6 +12,8 @@ import PackingList from './components/step05/PackingList';
 import TextList from './components/step06/TextList';
 import TextList2 from './components/step06/TextList2';
 import TextList3 from './components/step06/TextList3';
+import Event01 from './components/step07/Event01';
+import Event02 from './components/step07/Event02';
 
 function App() {
   const items = [
@@ -50,6 +52,10 @@ function App() {
       <TextList2 />
       <hr />
       <TextList3 />
+      <hr />
+      <Event01 />
+      <hr />
+      <Event02 />
     </div>
   );
 }
